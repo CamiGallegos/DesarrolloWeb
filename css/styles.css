@@ -1,0 +1,275 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos generales */
+@font-face {
+  font-family: "fuente";
+  src: url(../resources/ShadowsIntoLight-Regular.ttf) format("truetype");
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "fuente";
+}
+
+/* Estilos del encabezado */
+#encabezado {
+  background-color: black;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+/* Estilos de la navegación */
+#navegacion-principal {
+  background-color: black;
+  padding: 10px;
+  text-align: center;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#navegacion-principal ul {
+  list-style: none;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+}
+
+#navegacion-principal li {
+  margin: 0 10px;
+  font-size: 10px;
+}
+
+#navegacion-principal a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Estilos del contenido principal */
+#contenido-principal {
+  padding: 20px;
+  text-align: center;
+}
+
+.contenedor-imagen-principal {
+  margin-bottom: 20px;
+}
+
+.contenedor-imagen-principal img {
+  max-width: 65%;
+  height: auto;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+.contenedor-imagenes-adicionales {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contenedor-imagenes-adicionales figure {
+  margin: 10px;
+}
+
+.contenedor-imagenes-adicionales img {
+  width: 300px;
+  height: 300px;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+.contenedor-imagenes-adicionales figcaption {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3em;
+  margin-top: 5px;
+}
+
+/* Estilos del pie de página */
+#pie-de-pagina {
+  background-color: black;
+  padding: 10px;
+  text-align: center;
+  border-top: 1px solid white;
+}
+
+.texto-pie small {
+  font-size: 18px;
+  color: white;
+}
+
+.texto-pie address {
+  font-size: 18px;
+}
+
+/* Iconos del footer */
+.redes-sociales {
+  margin-right: 20px;
+  color: #333;
+  font-size: 30px;
+}
+
+/* Estilos específicos para la página de cambios */
+.contenido-cambios {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.imagen-cambios {
+  flex: 0 0 40%;
+  padding-right: 20px;
+}
+
+.imagen-cambios img {
+  width: 100%;
+  height: auto;
+}
+
+.texto-cambios {
+  flex: 0 0 60%;
+  text-align: left;
+  line-height: 1.5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.texto-cambios h2 {
+  margin-top: 0;
+}
+
+.texto-cambios ul {
+  margin-left: 20px;
+}
+
+/* Estilos específicos para la página de contacto */
+.formulario-contacto {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.campo-formulario {
+  margin-bottom: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.campo-formulario label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.campo-formulario input,
+.campo-formulario textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.campo-formulario textarea {
+  height: 150px;
+}
+
+.boton-formulario {
+  text-align: center;
+}
+
+.boton-formulario button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.boton-formulario button:hover {
+  background-color: #555;
+}
+
+/* Estilos específicos para la página de productos */
+#contenido-productos {
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+}
+
+#contenido-productos h2 {
+  text-align: center;
+}
+.fila-productos {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.fila-productos figure {
+  margin: 0 10px;
+}
+
+.fila-productos img {
+  width: 300px;
+  height: 300px;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+.fila-productos figcaption {
+  font-family: "fuente";
+  font-size: 1.3em;
+  margin-top: 5px;
+}
+
+/* Estilo del botón comprar */
+.boton-comprar {
+  padding: 10px 25px;
+  margin: 15px;
+  border-radius: 20px;
+  color: black;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilos específicos para la página de preguntas */
+#contenido-texto {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+#contenido-texto ol {
+  padding-left: 20px;
+}
+
+#contenido-texto ul {
+  padding-left: 20px;
+}
+
+#mapa-retiro {
+  text-align: center;
+}
+
+#mapa-retiro h3 {
+  margin-top: 20px;
+}
+
+#mapa {
+  margin-top: 10px;
+}
