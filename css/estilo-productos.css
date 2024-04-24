@@ -1,0 +1,46 @@
+/* Importar los estilos generales */
+@import url("miestilo.css");
+
+/* Estilos específicos para la página de productos */
+#contenido-productos {
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+  text-align: center;
+}
+
+.fila-productos {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.fila-productos figure {
+  display: inline-block;
+  margin: 0 10px;
+  vertical-align: top;
+}
+
+.fila-productos img {
+  width: 300px;
+  height: 300px;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+.fila-productos figcaption {
+  font-family: 'fuente';
+  font-size: 1.3em;
+  margin-top: 5px;
+}
+
+
+/* Estilo del boton comprar */
+.boton-comprar {
+  padding: 10px 25px;
+  margin: 15px;
+  border-radius: 20px;
+  color:black;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+

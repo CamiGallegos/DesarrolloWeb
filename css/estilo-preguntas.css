@@ -1,0 +1,54 @@
+/* Importar los estilos generales */
+@import url("miestilo.css");
+
+/* Estilos específicos para la página de preguntas */
+#contenido-principal {
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+#contenido-texto {
+  text-align: center;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#contenido-texto p {
+  margin-bottom: 20px;
+}
+
+#contenido-texto ol,
+#contenido-texto ul {
+  display: inline-block;
+  text-align: left;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+#contenido-texto ol li,
+#contenido-texto ul li {
+  margin-bottom: 10px;
+}
+
+/* Estilos para el mapa de retiro */
+#mapa-retiro {
+  margin-top: 40px;
+  text-align: center;
+}
+
+#mapa-retiro h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#mapa {
+  margin-bottom: 20px;
+}
+
+#mapa-retiro p {
+  font-size: 18px;
+}
