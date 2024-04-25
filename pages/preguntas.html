@@ -2,30 +2,48 @@
 <html lang="es">
   <head>
     <meta charset="iso-8559-1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Preguntas frecuentes de CAYETANO" />
     <meta name="keywords" content="preguntas, frecuentes, CAYETANO, tienda, online" />
     <title>CAYETANO - Preguntas Frecuentes</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   </head>
   <body>
-    <header id="encabezado">
-      <h1>CAYETANO</h1>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">CAYETANO</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./productos.html">Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="./preguntas.html">Preguntas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./cambios.html">Cambios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contacto.html">Contactos</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
-    <nav id="navegacion-principal">
-      <ul>
-        <li><a href="../index.html">Inicio</a></li>
-        <li><a href="./productos.html">Productos</a></li>
-        <li><a href="./preguntas.html">Preguntas</a></li>
-        <li><a href="./cambios.html">Cambios</a></li>
-        <li><a href="./contacto.html">Contactos</a></li>
-      </ul>
-    </nav>
-
-    <section id="contenido-principal">
+    <section id="contenido-principal" class="container">
       <header>
-        <h2>PREGUNTAS FRECUENTES</h2>
+        <h2 class="text-center mt-4">PREGUNTAS FRECUENTES</h2>
       </header>
       <div id="contenido-texto">
         <p>
@@ -116,25 +134,35 @@
       </div>
     </section>
 
-    <section id="mapa-retiro">
-      <h3>Punto de Retiro</h3>
-      <div id="mapa">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13085.579441111213!2d-57.9599073!3d-34.9216328!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e70ae8058711%3A0xd8f8676fd2e7b636!2sCAYETANO!5e0!3m2!1ses-419!2sar!4v1711485730910!5m2!1ses-419!2sar"
-          width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+    <section id="mapa-retiro" class="container">
+      <h3 class="text-center mt-4">Punto de Retiro</h3>
+      <div id="mapa" class="mt-3">
+        <div class="ratio ratio-16x9">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13085.579441111213!2d-57.9599073!3d-34.9216328!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e70ae8058711%3A0xd8f8676fd2e7b636!2sCAYETANO!5e0!3m2!1ses-419!2sar!4v1711485730910!5m2!1ses-419!2sar"
+            allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
       </div>
-      <p><h3>Contamos con varios puntos de retiro. consultanos!</h3></p>
+      <p class="text-center mt-3"><h3>Contamos con varios puntos de retiro. ¡Consultanos!</h3></p>
     </section>
 
-    <footer id="pie-de-pagina">
-      <h2>TU OUTFIT MAS CANCHERO</h2>
-      <div class="redes-sociales">
-        <a href="https://www.instagram.com/cayetano.okk" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="mailto: holacayetano@gmail.com"><i class="far fa-envelope"></i></a>
-        <a href="https://wa.me/5492216063880" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <footer id="pie-de-pagina" class="bg-dark text-light py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h2>TU OUTFIT MAS CANCHERO</h2>
+            <div class="redes-sociales">
+              <a href="https://www.instagram.com/cayetano.okk" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="mailto: holacayetano@gmail.com"><i class="far fa-envelope"></i></a>
+              <a href="https://wa.me/5492216063880" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

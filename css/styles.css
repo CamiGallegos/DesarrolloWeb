@@ -18,10 +18,34 @@ body {
 }
 
 /* Estilos del encabezado */
-#encabezado {
+header {
   background-color: black;
-  padding: 20px;
-  text-align: center;
+  padding: 20px 0;
+}
+
+.navbar-brand h1 {
+  font-size: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand h1:hover {
+  color: #ff0000;
+}
+
+.navbar-nav .nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #ff0000;
 }
 
 h1 {
@@ -34,27 +58,14 @@ h2 {
 
 /* Estilos de la navegación */
 #navegacion-principal {
-  background-color: black;
-  padding: 10px;
-  text-align: center;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-#navegacion-principal ul {
-  list-style: none;
-  font-size: 18px;
-  display: flex;
-  justify-content: center;
+#navegacion-principal .navbar-nav {
+  margin: 0 auto;
 }
 
-#navegacion-principal li {
-  margin: 0 10px;
-  font-size: 10px;
-}
-
-#navegacion-principal a {
+#navegacion-principal .nav-link {
   color: white;
   text-decoration: none;
   font-size: 18px;
@@ -64,48 +75,46 @@ h2 {
 
 /* Estilos del contenido principal */
 #contenido-principal {
-  padding: 20px;
-  text-align: center;
+  padding: 20px 0;
 }
 
-.contenedor-imagen-principal {
-  margin-bottom: 20px;
+/* Estilos del carrusel */
+.carousel-image {
+  height: 800px;
+  object-fit: contain;
 }
 
-.contenedor-imagen-principal img {
-  max-width: 65%;
-  height: auto;
-  border: 2px solid white;
-  border-radius: 5px;
-}
-
-.contenedor-imagenes-adicionales {
+.custom-carousel-indicators {
+  position: static;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
 }
 
-.contenedor-imagenes-adicionales figure {
-  margin: 10px;
+.custom-carousel-indicators button {
+  width: 92px !important;
+  height: 120px !important;
+  margin: 0 20px !important;
+  border: none !important;
+  opacity: 0.7 !important;
+  transition: opacity 0.3s ease !important;
 }
 
-.contenedor-imagenes-adicionales img {
-  width: 300px;
-  height: 300px;
-  border: 2px solid white;
-  border-radius: 5px;
+.custom-carousel-indicators button.active {
+  opacity: 1;
 }
 
-.contenedor-imagenes-adicionales figcaption {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.3em;
-  margin-top: 5px;
+.custom-carousel-indicators button img {
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+  border: 5px solid #000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Estilos del pie de página */
 #pie-de-pagina {
-  background-color: black;
-  padding: 10px;
+  padding: 20px;
   text-align: center;
   border-top: 1px solid white;
 }
@@ -121,21 +130,25 @@ h2 {
 
 /* Iconos del footer */
 .redes-sociales {
-  margin-right: 20px;
-  color: #333;
+  margin-top: 20px;
+}
+
+.redes-sociales a {
+  color: white;
   font-size: 30px;
+  margin: 0 10px;
 }
 
 /* Estilos específicos para la página de cambios */
 .contenido-cambios {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .imagen-cambios {
-  flex: 0 0 40%;
+  flex: 0 0 100%;
   padding-right: 20px;
+  margin-bottom: 20px;
 }
 
 .imagen-cambios img {
@@ -144,7 +157,7 @@ h2 {
 }
 
 .texto-cambios {
-  flex: 0 0 60%;
+  flex: 0 0 100%;
   text-align: left;
   line-height: 1.5;
   font-family: Arial, Helvetica, sans-serif;
@@ -213,25 +226,27 @@ h2 {
 #contenido-productos h2 {
   text-align: center;
 }
+
 .fila-productos {
   margin-bottom: 20px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
 }
 
-.fila-productos figure {
-  margin: 0 10px;
+.producto {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
 }
 
-.fila-productos img {
-  width: 300px;
-  height: 300px;
-  border: 2px solid white;
-  border-radius: 5px;
+.producto-imagen {
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
-.fila-productos figcaption {
+.producto:hover .producto-imagen {
+  transform: scale(1.1);
+}
+
+.producto figcaption {
   font-family: "fuente";
   font-size: 1.3em;
   margin-top: 5px;
@@ -239,12 +254,14 @@ h2 {
 
 /* Estilo del botón comprar */
 .boton-comprar {
-  padding: 10px 25px;
-  margin: 15px;
-  border-radius: 20px;
-  color: black;
-  background-color: white;
-  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+  background-color: #333;
+  color: white;
+}
+
+.boton-comprar:hover {
+  background-color: #555;
 }
 
 /* Estilos específicos para la página de preguntas */
@@ -272,4 +289,19 @@ h2 {
 
 #mapa {
   margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+  .contenido-cambios {
+    flex-wrap: nowrap;
+  }
+
+  .imagen-cambios {
+    flex: 0 0 40%;
+    margin-bottom: 0;
+  }
+
+  .texto-cambios {
+    flex: 0 0 60%;
+  }
 }
