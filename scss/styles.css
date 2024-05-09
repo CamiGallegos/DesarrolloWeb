@@ -1,5 +1,21 @@
-@charset "UTF-8";
-/* Reset CSS */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slideInUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +23,6 @@
   box-sizing: border-box;
 }
 
-/* Estilos generales */
 @font-face {
   font-family: "fuente";
   src: url(../resources/ShadowsIntoLight-Regular.ttf) format("truetype");
@@ -15,48 +30,42 @@
 body {
   background-color: black;
   color: white;
-  font-family: "fuente";
+  font-family: "fuente", Arial, Helvetica, sans-serif;
 }
 
-/* Estilos del encabezado */
 header {
   background-color: black;
   padding: 20px 0;
 }
-
-.navbar-brand {
+header .navbar-brand {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
   margin-top: 20px;
+  animation: fadeIn 1s ease;
 }
-
-.navbar-brand h1 {
+header .navbar-brand h1 {
   font-size: 60px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: color 0.3s ease;
 }
-
-.navbar-brand h1:hover {
+header .navbar-brand h1:hover {
   color: #746f6f;
 }
-
-.separator {
+header .separator {
   width: 100%;
   height: 0px;
   margin-bottom: 10px;
 }
-
-.navbar-nav {
+header .navbar-nav {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.navbar-nav .nav-link {
+header .navbar-nav .nav-link {
   color: white;
   text-decoration: none;
   font-size: 22px;
@@ -64,35 +73,31 @@ header {
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
-
-.navbar-nav .nav-link:hover {
+header .navbar-nav .nav-link:hover {
   background-color: #746f6f;
 }
-
 @media (max-width: 991.98px) {
-  .navbar-toggler {
+  header .navbar-toggler {
     margin-right: auto;
   }
-  .navbar-collapse {
+  header .navbar-collapse {
     margin-top: 20px;
   }
-  .navbar-nav {
+  header .navbar-nav {
     flex-direction: column;
     align-items: center;
   }
-  .navbar-nav .nav-link {
+  header .navbar-nav .nav-link {
     margin-bottom: 10px;
   }
 }
-/* Estilos de la navegación */
+
 #navegacion-principal {
   font-family: Arial, Helvetica, sans-serif;
 }
-
 #navegacion-principal .navbar-nav {
   margin: 0 auto;
 }
-
 #navegacion-principal .nav-link {
   color: white;
   text-decoration: none;
@@ -101,25 +106,21 @@ header {
   border-radius: 5px;
 }
 
-/* Estilos del contenido principal */
 #contenido-principal {
   padding: 20px 0;
 }
 
-/* Estilos del carrusel */
 .carousel-image {
   height: 800px;
   object-fit: contain;
 }
-
-.custom-carousel-indicators {
+.carousel .custom-carousel-indicators {
   position: static;
   margin-top: 20px;
   display: flex;
   justify-content: center;
 }
-
-.custom-carousel-indicators button {
+.carousel .custom-carousel-indicators button {
   width: 92px !important;
   height: 120px !important;
   margin: 0 20px !important;
@@ -127,12 +128,10 @@ header {
   opacity: 0.7 !important;
   transition: opacity 0.3s ease !important;
 }
-
-.custom-carousel-indicators button.active {
+.carousel .custom-carousel-indicators button.active {
   opacity: 1;
 }
-
-.custom-carousel-indicators button img {
+.carousel .custom-carousel-indicators button img {
   width: 100%;
   height: 100%;
   object-fit: scale-down;
@@ -140,99 +139,93 @@ header {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilos del pie de página */
 #pie-de-pagina {
   padding: 20px;
   text-align: center;
   border-top: 1px solid white;
 }
-
-.texto-pie small {
+#pie-de-pagina .texto-pie small {
   font-size: 18px;
   color: white;
 }
-
-.texto-pie address {
+#pie-de-pagina .texto-pie address {
   font-size: 18px;
 }
-
-/* Iconos del footer */
-.redes-sociales {
+#pie-de-pagina .redes-sociales {
   margin-top: 20px;
 }
-
-.redes-sociales a {
+#pie-de-pagina .redes-sociales a {
   color: white;
   font-size: 30px;
   margin: 0 10px;
+  animation: slideInUp 1s ease;
 }
 
-/* Estilos específicos para la página de cambios */
 .contenido-cambios {
   display: flex;
   flex-wrap: wrap;
 }
-
-.imagen-cambios {
+.contenido-cambios .imagen-cambios {
   flex: 0 0 100%;
   padding-right: 20px;
   margin-bottom: 20px;
 }
-
-.imagen-cambios img {
+.contenido-cambios .imagen-cambios img {
   width: 100%;
   height: auto;
 }
-
-.texto-cambios {
+.contenido-cambios .texto-cambios {
   flex: 0 0 100%;
   text-align: center;
   line-height: 1.5;
   font-family: Arial, Helvetica, sans-serif;
 }
-
-.texto-cambios h2 {
+.contenido-cambios .texto-cambios h2 {
   margin-top: 0;
 }
-
-.texto-cambios ul {
+.contenido-cambios .texto-cambios ul {
   margin-left: 20px;
 }
+@media (min-width: 768px) {
+  .contenido-cambios {
+    flex-wrap: nowrap;
+  }
+  .contenido-cambios .imagen-cambios {
+    flex: 0 0 40%;
+    margin-bottom: 0;
+  }
+  .contenido-cambios .texto-cambios {
+    flex: 0 0 60%;
+  }
+}
 
-/* Estilos específicos para la página de contacto */
 .formulario-contacto {
   max-width: 500px;
   margin: 0 auto;
 }
-
-.campo-formulario {
+.formulario-contacto .campo-formulario {
   margin-bottom: 20px;
   font-family: Arial, Helvetica, sans-serif;
 }
-
-.campo-formulario label {
+.formulario-contacto .campo-formulario label {
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
 }
-
-.campo-formulario input,
-.campo-formulario textarea {
+.formulario-contacto .campo-formulario input,
+.formulario-contacto .campo-formulario textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-
-.campo-formulario textarea {
+.formulario-contacto .campo-formulario textarea {
   height: 150px;
 }
-
-.boton-formulario {
+.formulario-contacto .boton-formulario {
   text-align: center;
 }
-
-.boton-formulario button {
+.formulario-contacto .boton-formulario button {
   padding: 10px 20px;
   background-color: #333;
   color: #fff;
@@ -240,32 +233,26 @@ header {
   border-radius: 4px;
   cursor: pointer;
 }
-
-.boton-formulario button:hover {
+.formulario-contacto .boton-formulario button:hover {
   background-color: #555;
 }
 
-/* Estilos específicos para la página de productos */
 #contenido-productos {
   max-height: 800px;
   overflow-y: auto;
 }
-
 #contenido-productos h2 {
   text-align: center;
 }
-
-.fila-productos {
+#contenido-productos .fila-productos {
   margin-bottom: 20px;
 }
-
-.producto {
+#contenido-productos .producto {
   position: relative;
   overflow: hidden;
   margin-bottom: 20px;
 }
-
-.producto-imagen {
+#contenido-productos .producto-imagen {
   transition: transform 0.3s ease;
   cursor: pointer;
   width: 100%;
@@ -273,67 +260,67 @@ header {
   aspect-ratio: 1/1.5;
   object-fit: cover;
 }
-
-.producto:hover .producto-imagen {
+#contenido-productos .producto:hover .producto-imagen {
   transform: scale(1.2);
 }
-
-.producto figcaption {
-  font-family: "fuente";
+#contenido-productos .producto figcaption {
+  font-family: "fuente", Arial, Helvetica, sans-serif;
   font-size: 1.5em;
   margin-top: 5px;
   text-align: center;
 }
-
-/* Estilo del botón comprar */
-.boton-comprar {
+#contenido-productos .producto .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+#contenido-productos .producto:hover .overlay {
+  opacity: 1;
+}
+#contenido-productos .producto .overlay-content {
+  text-align: center;
+  color: white;
+}
+#contenido-productos .boton-comprar {
   font-size: 1.5em;
   margin-top: 10px;
   transition: background-color 0.3s ease;
   background-color: #333;
   color: white;
 }
-
-.boton-comprar:hover {
+#contenido-productos .boton-comprar:hover {
   background-color: #555;
 }
 
-/* Estilos específicos para la página de preguntas */
 #contenido-texto {
   max-width: 800px;
   margin: 0 auto;
   text-align: left;
 }
-
 #contenido-texto ol {
   padding-left: 20px;
 }
-
 #contenido-texto ul {
   padding-left: 20px;
+}
+#contenido-texto address {
+  font-size: 18px;
 }
 
 #mapa-retiro {
   text-align: center;
 }
-
 #mapa-retiro h3 {
   margin-top: 20px;
 }
-
-#mapa {
+#mapa-retiro #mapa {
   margin-top: 10px;
-}
-
-@media (min-width: 768px) {
-  .contenido-cambios {
-    flex-wrap: nowrap;
-  }
-  .imagen-cambios {
-    flex: 0 0 40%;
-    margin-bottom: 0;
-  }
-  .texto-cambios {
-    flex: 0 0 60%;
-  }
 }/*# sourceMappingURL=styles.css.map */
