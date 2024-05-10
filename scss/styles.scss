@@ -5,8 +5,6 @@ $primary-color: black;
 $secondary-color: white;
 $accent-color: #746f6f;
 $font-family-primary: "fuente", Arial, Helvetica, sans-serif;
-$font-family-secondary: Arial, Helvetica, sans-serif;
-
 // Mixins
 @mixin transition($property, $duration, $timing-function) {
   transition: $property $duration $timing-function;
@@ -64,7 +62,7 @@ header {
     align-items: center;
     margin-bottom: 20px;
     margin-top: 20px;
-    animation: fadeIn 1s ease;
+    animation: fadeIn 10s ease;
 
     h1 {
       font-size: 60px;
@@ -126,7 +124,7 @@ header {
 
 // Estilos de la navegación
 #navegacion-principal {
-  font-family: $font-family-secondary;
+  font-family: $font-family-primary;
 
   .navbar-nav {
     margin: 0 auto;
@@ -206,7 +204,7 @@ header {
       color: $secondary-color;
       font-size: 30px;
       margin: 0 10px;
-      animation: slideInUp 1s ease;
+      animation: slideInUp 10s ease;
     }
   }
 }
@@ -229,16 +227,27 @@ header {
 
   .texto-cambios {
     flex: 0 0 100%;
-    text-align: center;
     line-height: 1.5;
-    font-family: $font-family-secondary;
+    font-family: $font-family-primary;
+
+    h1 {
+      font-family: $font-family-primary;
+      text-align: center;
+      margin-top: 1.5rem;
+    }
 
     h2 {
       margin-top: 0;
+      font-family: $font-family-primary;
+    }
+
+    p {
+      font-family: $font-family-primary;
     }
 
     ul {
       margin-left: 20px;
+      font-family: $font-family-primary;
     }
   }
 
@@ -252,6 +261,11 @@ header {
 
     .texto-cambios {
       flex: 0 0 60%;
+      padding-left: 20px;
+
+      h1 {
+        text-align: center;
+      }
     }
   }
 }
@@ -263,7 +277,7 @@ header {
 
   .campo-formulario {
     margin-bottom: 20px;
-    font-family: $font-family-secondary;
+    font-family: $font-family-primary;
 
     label {
       display: block;
