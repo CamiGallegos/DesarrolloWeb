@@ -1,0 +1,3 @@
+@mixin animation($name, $duration, $timing-function) {
+    animation: $name $duration $timing-function;
+  }

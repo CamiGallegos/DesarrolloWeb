@@ -1,0 +1,77 @@
+@import 'partials/variables';
+@import 'partials/mixins';
+@import 'partials/header';
+@import 'partials/navigation';
+@import 'partials/footer';
+@import 'partials/main';
+@import 'partials/cambios';
+@import 'partials/contacto';
+@import 'partials/productos';
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "fuente";
+  src: url(../resources/ShadowsIntoLight-Regular.ttf) format("truetype");
+}
+
+body {
+  background-color: $background-color-base;
+  color: $color-base;
+  font-family: $font-family-base;
+}
+
+#contenido-texto {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+
+  ol {
+    padding-left: 20px;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+
+  address {
+    font-size: 18px;
+  }
+}
+
+#mapa-retiro {
+  text-align: center;
+
+  h3 {
+    margin-top: 20px;
+  }
+
+  #mapa {
+    margin-top: 10px;
+  }
+}

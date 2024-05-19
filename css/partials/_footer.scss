@@ -1,0 +1,25 @@
+#pie-de-pagina {
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid $color-base;
+  
+    .texto-pie small {
+      font-size: 18px;
+      color: $color-base;
+    }
+  
+    .texto-pie address {
+      font-size: 18px;
+    }
+  
+    .redes-sociales {
+      margin-top: 20px;
+  
+      a {
+        color: $color-base;
+        font-size: 30px;
+        margin: 0 10px;
+        @include animation(slideInUp, 10s, ease);
+      }
+    }
+  }
