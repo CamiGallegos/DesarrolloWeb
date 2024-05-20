@@ -1,0 +1,16 @@
+
+#navegacion-principal {
+    font-family: $font-family-base;
+  
+    .navbar-nav {
+      margin: 0 auto;
+    }
+  
+    .nav-link {
+      color: $color-base;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+  }
