@@ -331,7 +331,7 @@ header .navbar-nav .nav-link:hover {
 
 @font-face {
   font-family: "fuente";
-  src: url(../resources/ShadowsIntoLight-Regular.ttf) format("truetype");
+  src: url(../assets/fonts/ShadowsIntoLight-Regular.ttf) format("truetype");
 }
 body {
   background-color: black;
